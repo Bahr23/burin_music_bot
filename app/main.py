@@ -29,6 +29,8 @@ dp = Dispatcher()
 # Start handler
 @dp.message(CommandStart())
 async def command_start_handler(message: Message) -> None:
+    await message.answer('хуи')
+    
     user = await User.get_or_create(
         user_id=message.from_user.id,
         first_name=message.from_user.first_name,
