@@ -13,6 +13,5 @@ RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
 WORKDIR /app/code
 COPY ./app /app/code
-RUN pybabel compile -d locales -D messages;
 
 ENTRYPOINT ["bash", "/app/docker-entrypoint.sh"]
