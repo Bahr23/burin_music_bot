@@ -26,6 +26,7 @@ def validate_url(url):
 dp = Dispatcher()
 
 
+# Start handler
 @dp.message(CommandStart())
 async def command_start_handler(message: Message) -> None:
     user = await User.get_or_create(
