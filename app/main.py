@@ -59,7 +59,7 @@ async def command_start_handler(message: Message) -> None:
 @dp.callback_query(F.data == "continue") 
 async def callback_continue_handler(query: CallbackQuery):
     main_post = await Post.get(tag='main')
-    await query.message.answer(main_post.text)
+    await query.message.answer(main_post.text, disable_web_page_preview=True)
 
 
 class Form(StatesGroup):
