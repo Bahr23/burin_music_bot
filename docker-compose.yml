@@ -1,0 +1,13 @@
+services:
+  music_bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: music_bot
+    restart: 'always'
+    networks:
+      - tgsell_db_network
+
+networks:
+    tgsell_db_network:
+        external: true
