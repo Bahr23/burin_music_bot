@@ -104,7 +104,7 @@ async def process_link(message: Message, state: FSMContext) -> None:
     
     await message.bot.send_message(
         chat_id=NOTIFY_GROUP,
-        text=f'Пользователь {user.username if user.username else user.user_id} добавил ссылку: {message.text}'
+        text=f'Пользователь @{user.username if user.username else user.user_id} добавил ссылку: {message.text}'
         
     )
     
